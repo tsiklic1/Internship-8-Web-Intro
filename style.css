@@ -79,3 +79,11 @@ header{
     font-size: 16px;
     padding-left: 96px;
 }
+
+li{
+    margin-bottom: 20px;
+}
+
+.italicText{
+    font-style: italic;
+}
