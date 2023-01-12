@@ -12,6 +12,14 @@ body{
     margin-bottom: 70px;
 }
 
+p{
+    line-height: 24px;
+}
+
+h2{
+    margin-bottom: 0px;
+}
+
 .mainTitle{
     color: black;
     font-weight: normal;
@@ -19,15 +27,17 @@ body{
     font-size: 32px;
     margin-bottom: 0px;
     margin-top: 0px;
-    padding-top: 9px
-
+    padding-top: 16px
 }
+
 a:hover{
     color: #37f;
 }
 
 header{
     background: #ddd;
+    border-bottom: solid 2px #777;
+
 }
 
 .content{
@@ -40,16 +50,19 @@ header{
     color: #37f; 
 }
 
-#subtitle{
+.subtitle{
     color: black;
     font-weight: normal;
     text-decoration: none;
-    font-size: 23px;
+    font-size: 21px;
 }
 
-#subtitleDate{
+
+.subtitleDate{
     color:  #555;
-    font-size: 18px;
+    font-size: 15px;
+    margin-top: 0px;
+    padding-right: 10px;
 }
 
 #defaultWord{
@@ -59,4 +72,10 @@ header{
 .description{
     margin-top: 0px;
     margin-bottom: 0px;
+    padding-bottom: 17px;
+}
+
+.indentedParagraph{
+    font-size: 16px;
+    padding-left: 96px;
 }
