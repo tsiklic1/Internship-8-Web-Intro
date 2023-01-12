@@ -9,19 +9,33 @@ a:hover{
     color: #37f;
 }
 
+header{
+    background: #ddd;
+}
+
+.content{
+    padding-left: 75px;
+}
+
+
 .paragraphLink{
     text-decoration: underline;
     color: #37f; 
     /* stavit tocnu */
 }
 
-/* a.paragraphLink:hover{
-    color: blue;
-} */
-
 #subtitle{
     color: black;
     font-weight: normal;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 23px;
+}
+
+#subtitleDate{
+    color:  #555;
+    font-size: 18px;
+}
+
+#defaultWord{
+    font-family: WebKitBugWorkaround, monospace;
 }
