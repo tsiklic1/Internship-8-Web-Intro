@@ -1,9 +1,26 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://themes.googleusercontent.com/static/fonts/opensans/v7/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff), url(OpenSans.woff) format('woff');
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    margin: 0px;
+    margin-bottom: 70px;
+}
+
 .mainTitle{
     color: black;
     font-weight: normal;
     text-decoration: none;
-    font-size: 35px;
-    /* font-family: "Open Sans", sans-serif; */
+    font-size: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 9px
+
 }
 a:hover{
     color: #37f;
@@ -14,14 +31,13 @@ header{
 }
 
 .content{
-    padding-left: 75px;
+    padding-left: 84px;
 }
 
 
 .paragraphLink{
     text-decoration: underline;
     color: #37f; 
-    /* stavit tocnu */
 }
 
 #subtitle{
@@ -38,4 +54,9 @@ header{
 
 #defaultWord{
     font-family: WebKitBugWorkaround, monospace;
+}
+
+.description{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
