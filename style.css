@@ -87,3 +87,7 @@ li{
 .italicText{
     font-style: italic;
 }
+
+.indentedLink{
+    padding-left: 40px;
+}
