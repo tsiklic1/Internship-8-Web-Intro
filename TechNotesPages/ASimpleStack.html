@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Notes: A simple stack for today's web hacks</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class = "content">
+        <H1 class = "mainTitle">
+            <a class = "mainTitle" href="neugierig.html">neugierig.org</a>
+            :
+            <a class = "mainTitle" href="techNotes.html">Tech Notes</a>
+        </H1>
+        <p class = "description">You're reading a single entry. Go <a class = "paragraphLink" href="techNotes.html">back to the front page</a> for more.</p>
+    </header> 
+    <div class = "content">
+        <h2><a class = "subtitle" href="">A simple stack for today's web hacks</a></h2>
+        <p class = "subtitleDate">December 10, 2022</p>
+        <p>
+            Web development can be overwhelming, with frameworks and tools continually churning. <br>
+            Here's some advice that has worked well for me on my own projects which emphasizes <br>
+            simplicity, stability, and predictability. The recommendations I make here are only for tools <br>
+            that are high quality and which are unlikely to change significantly in the future.
+        </p>
+        <p class = "indentedLink">
+            Like most things I write on this blog, my intended audience is more or less "me if <br>
+            I didn't know this stuff already", so if you're say a C++ developer who isn't super <br>
+            familiar with nodejs etc and just wants to write a bit of TypeScript then this is the <br>
+            post for you. People have a lot of strong opinions about this stuff — to my mind, <br>
+            too strong, when a lot of the details really just don't matter that much, especially <br>
+            given how whimsical web fashion is — but if you are such a person then this post <br>
+            is certainly not for you!
+        </p>
+        <p>
+            To start with, we're not going to use any preconfigured template repository. Blog posts like <br> 
+            this one seem to usually start with "copy my setup" but that feels like the opposite of what I <br>
+            want — I want the fewest moving parts possible and to be able understand what pieces I do <br>
+            use are for.
+        </p>
+        <p>
+            Instead we start from scratch:
+        </p>
+        <p class = "indentedCode">
+            $ mkdir myproject <br>
+            $ cd myproject
+        </p>
+        <p>
+            Next, for frontend tooling, npm is inevitable. (Installing nodejs/npm is out of scope here <br>
+            since it's OS-dependent but it's trivial.) Make your project a root directory for npm <br>
+            dependencies, bypassing any questions:
+        </p>
+        <p class = "indentedCode">
+            $ npm init -y
+        </p>
+        <p>
+            This generates <span class ="codeLine">package.json</span>. Most of its contents aren't necessary, feel free to edit.
+        </p>
+        <p>
+            With npm in place we install TypeScript. I think of TypeScript as the bare minimum for <br>
+            keeping sane writing JS and it's a self-contained dependency. We install a copy of TypeScript <br>
+            per project because we want the TypeScript compiler version pinned to the project, which <br>
+            makes it resilient to bitrotting as new TypeScript versions come out.
+        </p>
+        <p class = "indentedCode">
+            $ npm install typescript
+        </p>
+        <p>
+            This downloads the compiler into the <span class = "codeLine">node_modules</span>  directory, updates <span class = "codeLine">package.json</span>, and <br>
+            adds <span class = "codeLine">package-lock.json</span>, which records the pinned version of the compiler.
+        </p>
+        <p>
+            Next we mark the repository as a TypeScript root.
+        </p>
+        <p class = "indentedCode">$ npx tsc --init</p>
+
+        <!-- priskoceno par paragrafa -->
+
+        <p>
+            You might have some follow-up questions for recommendations which I will summarize in list form:
+        </p>
+        <ul class = "noLineSpaceList">
+            <li class = "denseListElement"><span class = "boldText">Autoformatting.</span> prettier is standard but clunky and is set up similarly to how other <br>
+                tools here have been set up. dprint is a newer replacement that I have liked more but <br>
+                it's newer and riskier.
+            </li>
+            <li class = "denseListElement">
+                <span class ="boldText">Linting.</span>  The current state of the ecosystem is a general mess, I suggest avoiding it.
+            </li>
+            <li calss = "denseListElement">
+                <span class = "boldText">CSS languages.</span> Too complex for my taste, possibly also because my projects tend to <br>
+                not be that visually complex.
+            </li>
+            <li class = "denseListElement">
+                <span class ="boldText">Web frameworks.</span> This is a much more complex topic, worth an appendix!
+            </li>
+        </ul>
+
+        <!-- priskoceno par paragrafa -->
+
+        <p>
+            That ends up enough for most things I do, hope it works for you!
+        </p>
+        <p class = "indentedCode">
+            &lt;body&gt;&lt;/body&gt; <br>
+            &lt;script src='main.js'&gt;&lt;/script&gt;
+        </p>
+        <p>
+            And call into preact from main.tsx:
+        </p>
+        <p class = "indentedCode">
+            import * as preact from 'preact';
+            <br><br>
+            preact.render(&lt;h1&gt;hello, world&lt;/h1&gt;, document.body);
+
+        </p>
+    </div>
+</body>
+</html>

@@ -65,7 +65,7 @@ header{
     padding-right: 10px;
 }
 
-#defaultWord{
+.codeLine{
     font-family: WebKitBugWorkaround, monospace;
 }
 
@@ -91,3 +91,22 @@ li{
 .indentedLink{
     padding-left: 40px;
 }
+
+.indentedCode{
+    font-family: WebKitBugWorkaround, monospace;
+    padding-left: 40px;
+}
+
+.boldText{
+    font-weight:bold;
+}
+
+.noLineSpaceList{
+    line-height: 18px;
+}
+
+.denseListElement{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
